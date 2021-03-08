@@ -92,6 +92,7 @@
     align-items: end;
     .text {
       margin: 0 10px;
+      min-height: 8em
     }
     .kakto_nazv {
       flex-direction: column;
@@ -109,6 +110,9 @@
 
 @media screen and (max-width: 700px) {
   .cart {
+    .text {
+      width: 10em;
+    }
     .kakto_nazv {
       .koll {
         flex-direction: column;
