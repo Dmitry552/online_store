@@ -1,0 +1,121 @@
+﻿
+.cart {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #f3f3f3;
+  padding: 20px 0px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    border-radius: 10px;
+    width: 115px;
+    overflow: auto;
+    box-shadow: 0 0 15px 0px #0000008a;
+    opacity: 0.5;
+  }
+  .text {
+    margin-left: 46px;
+    margin-right: 20px;
+    border-right: 2px solid #c6c6c6;
+    width: 50%;
+    color: #767676;
+    padding-right: 10px;
+    h1 {
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  .kakto_nazv {
+    flex-direction: column;
+  .koll {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    .quantity_of_goods {
+      height: 30px;
+      display: flex;
+      margin-right: 10px; 
+      button {
+        display: inline-block;
+        text-align: center;
+        width: 30px;
+        padding-top: 1px;
+        font-size: 24px;
+        height: 100%;
+        box-sizing: border-box;
+        border: 1px solid #c2c2c2;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+        input {
+          width: 36px;
+          height: 100%;
+          margin: 0 5px;
+          box-sizing: border-box;
+          border: transparent;
+        }
+      }
+      .price {
+        font-size: 20px;
+        color: #656565;
+        p {
+          display: inline;
+        }
+        span {
+          margin-left: 6px;
+          //font-size: 17px;
+          color: red
+        }
+      }
+    }
+    .renouncement {
+      align-self: baseline;
+      padding-top: 9px;
+      font-size: 25px;
+      color: #797979;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .cart {
+    align-items: end;
+    .text {
+      margin: 0 10px;
+    }
+    .kakto_nazv {
+      flex-direction: column;
+      align-self: center;
+      .koll {
+        justify-content: end;
+        flex-direction: column;
+        .price {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cart {
+    .kakto_nazv {
+      .koll {
+        flex-direction: column;
+        .price {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

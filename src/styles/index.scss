@@ -1,0 +1,17 @@
+﻿@import './reset.scss';
+@import './fonts.scss';
+@import './all.min.css';
+
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+}
+
+@import './CardList.scss';
+@import './Card.scss';
+@import './Basket.scss';
+@import './List.scss';
