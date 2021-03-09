@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import List from './List';
 
@@ -31,18 +32,20 @@ class Basket extends Component {
                 title={list.title}
                 img={list.img}
                 price={list.price}
-                quantity={list.quantity}
                 total={list.total}
                 discount={list.discount}
               />
             )) : <h3>Корзина пуста</h3>}
-            {card_list.length > 0 ? 
               <div className="Buy">
                 <div className="purchase">
-                  <div className="full_cost"><p>{total}</p><i className="fas fa-euro-sign"/></div>
+                  <Link to='/'><button className="redirect">Продолжить покупку</button></Link>
+                  {
+                    card_list.length > 0 ?
+                    <div className="full_cost"><p>{total}	&#36;</p></div>
+                    : ''
+                  }
                 </div>
               </div>
-            : ''}
           </div>
         </div>
       </div>
@@ -50,9 +53,10 @@ class Basket extends Component {
   }
 }
 
-const mapStateToProps = ({CardListReducer}, ) => ({
+const mapStateToProps = ({CardListReducer}) => ({
   card_list: CardListReducer.card,
-  total: CardListReducer.total
+  total: CardListReducer.total,
+
 })
 
 const mapDispatchToProps = {

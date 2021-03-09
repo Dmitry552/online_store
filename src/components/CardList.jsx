@@ -46,7 +46,7 @@ class CardList extends Component {
 
 const mapStateToProps = ({CardListReducer}) => ({
   prais_list: CardListReducer.prais_list,
-  indicator: CardListReducer.card.length
+  indicator: CardListReducer.card.length,
 })
 
 const mapDispatchToProps = {

@@ -12,6 +12,7 @@ class List extends Component {
 
   render() {
     const {id, title, img, price, quantity, total, change_quantity, discount} = this.props;
+    
     return (
       <div className="cart"> 
         <div className="img">
@@ -19,7 +20,7 @@ class List extends Component {
         </div>
         <div className="text">
           <h1>{title}</h1>
-          <h1>{price} &euro;</h1>
+          <h1>{price} &#36;</h1>
         </div>
         <div className="kakto_nazv">
           <div className="renouncement" onClick={()=>(this._hendlerDeleteProductCard(id))}><i className="far fa-trash-alt"></i></div>
@@ -30,9 +31,9 @@ class List extends Component {
               <button className="increase" onClick={()=>(change_quantity(id, 'increment'))}>+</button>
             </div>
             <div className="price">
-              <p>{total} &euro;</p>
+              <p>{total} &#36;</p>
               {discount ?
-                <span>( - {discount} &euro; )</span>
+                <span>( - {discount} &#36; )</span>
                 : ''
               }
               
@@ -44,8 +45,9 @@ class List extends Component {
   }
 }
 
-const mapStateToProps = ({CardListReducer}) => ({
-  card: CardListReducer.card
+const mapStateToProps = ({CardListReducer}, {id}) => ({
+  card: CardListReducer.card,
+  quantity: CardListReducer.quantity.filter((e)=>(e.id === id))[0].quantity
 })
 
 const mapDispatchToProps = {

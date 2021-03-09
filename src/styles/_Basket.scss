@@ -9,19 +9,38 @@
   .card-list {
     width: 100%;
     .Buy {
-      display: flex;
-      justify-content: flex-end;
       margin-top: 20px;
       width: 100%;
       height: 100px;
       .purchase {
-        width: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        height: 100%;
+        .redirect {
+          height: 40px;
+          width: 170px;
+          border: none;
+          border-radius: 8px;
+          font-size: 15px;
+          cursor: inherit;
+        }
+        .redirect :hover {
+          box-shadow: 0 0 13px 4px rgba(211, 90, 90,  0.53);
+          background: #fc5a5a6b;
+        }
         .full_cost {
           font-size: 24px;
-          display: flex;
           i {
             margin-left: 10px;
           }
+        }
+        a :hover {
+          box-shadow: 0 0 13px 4px rgba(211, 90, 90,  0.53);
+          background: #fc5a5a6b;
+          color: red;
+          transition: .3s ease-in;
         }
       }
     }

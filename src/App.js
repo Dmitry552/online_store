@@ -11,14 +11,14 @@ class App extends Component {
         <Router>
           <div className="conteiner">
             <Switch>
-              <Route path='/' exact>
+              <Route path='/store' exact>
                 <CardList />
               </Route>
               <Route path='/basket' exact>
                 <Basket />
               </Route>
               <Route path='*'>
-                <Redirect to='/'/>
+                <Redirect to='/store'/>
               </Route>
             </Switch>
           </div>

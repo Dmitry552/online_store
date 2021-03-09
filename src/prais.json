@@ -4,21 +4,24 @@
   "title": "Банан",
   "img": "./img/banan-min.jpg",
   "price": "10",
-  "position": true
+  "position": true,
+  "discount": 0
   },
   {
     "id": "2",
     "title": "Яблоко",
     "img": "./img/yabloko-min.jpg",
     "price": "8",
-    "position": true
+    "position": true,
+    "discount": 0
   },
   {
     "id": "3",
     "title": "Папая",
     "img": "./img/papaya-min.jpg",
     "price": "10",
-    "position": true
+    "position": true,
+    "discount": 0
   } 
 ]
 
